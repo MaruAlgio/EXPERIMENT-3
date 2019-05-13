@@ -7,37 +7,47 @@
 #include <conio.h>
 #include<string.h>
 
+#include <iostream>
+#include <conio.h>
+#include<string.h>
+#include <algorithm>
 using namespace std;
 
-int main ()
+int main()
 {
+	int i,j,n;
+	int temp;
+	char c[101];
 	
-	int y, x, k;
-	char input[30];
-	char output[30];
 	
-	//cout << "How many characters do you want to input? ";
-	//cin >> k;
 	
 	cout << "Enter any word, numbers, or combination of characters: ";
-	cin >> input;
+	cin >> c;
 	
-	int a = strlen(input);
+	int a = strlen(c);
+	//cout << a;
 	
-	//cout << a ;
+/*	for (i=0; i<=a; i++)
+		for (j=i; j<=a ; j++)
+			if (c[i] > c[j]);
+				{
+				//swap(c[i],c[j]);
+				temp = c[i];
+				c[i] = c[j];
+				c[j] = temp;
+				}
+*/
+
+	sort(c+i, c+a+1);
 	
-	for (y = 0, x = a ; y <= a ; y++, x--)
-    	{
-        	 output[x] = input [y];
-    	}
-    	
-    for (y=0 ; y<= a ; y++)
-    {
-        cout << output[y];
-    }
-    
-    cout << "\n\nThe size of array is: "<< a;
-    
-	getch ();
-	return 0;	
+	for (i=0; i<= a ; i++)
+		cout << c[i] << " ";
+		
+	getch();
+	return 0;
+	
+	
 }
+
+	
+	
